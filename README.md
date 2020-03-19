@@ -60,10 +60,10 @@ How to Play Escape Room
 ===
 Since the premise of the game is to get Arbitrary to the flag, we can use the following keyboard commands to help Arbitrary achieve his goals. 
 
--“a” to move Arbitrary left
--“d” to move Arbitrary right
--“s” to shot bullets at blocks and robots
--“spacebar” to jump up
+- “a” to move Arbitrary left
+- “d” to move Arbitrary right
+- “s” to shot bullets at blocks and robots
+- “spacebar” to jump up
 
 If Arbitrary is caught by a guard, hit the restart button on the top right and you'll start all over again
 
@@ -83,7 +83,8 @@ Agent 'Guy' aka Arbitrary
 
 Agent 'Bumper'  
 ---
-The file 'src/bumper.h' contains information about how the ghost will behave when it hits a bumper. The file 'defs/bumper.json' contains information about the orange bumper in the game. This information dictates shape and physical properties.
+- The file 'src/bumper.h' contains information about how the ghost will behave when it hits a bumper. 
+- The file 'defs/bumper.json' contains information about the orange bumper in the game. This information dictates shape and physical properties.
 
 Agent 'Bullet':  
 ---
@@ -92,7 +93,7 @@ Agent 'Bullet':
 
 Agent 'Block'
 ---
--  The file 'src/block.h' contains information about the block and how it will behave when a bullet hits it.
+- The file 'src/block.h' contains information about the block and how it will behave when a bullet hits it.
 - The file 'defs/block.json' contains information about the orange block in the game. This information dictates shape and physical properties.
 
 
