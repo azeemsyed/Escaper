@@ -37,7 +37,7 @@ The above commands do the following:
 
 - The command `esm start` uses the <u>e</u>nviro <u>s</u>etup <u>m</u>anager to start a web server from which your browser can access the ENVRIO client. 
 
-go into the project, make the project and start the enviro sever as follows.
+Go into the project, make the project and start the enviro sever as follows.
 ```bash
 cd Escape 
 make
@@ -54,7 +54,7 @@ I am currently still in development of expanding Escape Room, features that are 
 
 - Restarting the game without exiting enviro
 - Multiple levels
-- counting blocks destroyed
+- Counting blocks destroyed
 
 Key Challenges and Overcomings
 ---
@@ -67,7 +67,7 @@ Another key challenge I had was being able to destroy blocks with bullets. When 
 
 Acknowledgements
 ----
-Thanks to Professor Eric Klavins and Victor Cannestro for your continuous support, guidance and mentoring. 
+Thanks to Professor Eric Klavins and Victor Cannestro for your continuous support, guidance, and mentoring. 
 
 The Escape Room uses code from the following: 
 - [Elma](https://github.com/klavinslab/elma)
