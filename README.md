@@ -116,7 +116,7 @@ Another key challenge I had was being able to destroy blocks with bullets. When 
 
 Acknowledgements
 ===
-Thanks to Professor Eric Klavins and Victor Cannestro for your continuous support, guidance, and mentoring. 
+Thanks to Professor Eric Klavins, Rajendra Hathwar and Victor Cannestro for your continuous support, guidance, and mentoring. 
 
 The Escape Room uses code from the following: 
 - [Elma](https://github.com/klavinslab/elma)
