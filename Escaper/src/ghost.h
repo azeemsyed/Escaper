@@ -10,6 +10,7 @@ class GhostController : public Process, public AgentInterface {
     public:
     GhostController() : Process(), AgentInterface(), vx(20){}
 
+// this defines a collisions between a Guard to a bumper
     void init() {
         prevent_rotation();
         notice_collisions_with("Bumper", [&](Event &e) {
@@ -19,25 +20,20 @@ class GhostController : public Process, public AgentInterface {
             }
         });       
     
-
         decorate(R"(<g>
             <circle cx=-5 cy=-3 r=2 style='fill:black'></circle>
-            <circle cx=5 cy=-3 r=2 style='fill:black'></circle></g>)");
+            <circle cx=5 cy=-3 r=2 style='fill:black'></circle> </g>)");
     }
 
     void start() {}
 
-    void pop(){
-        remove_agent(id());
-    }
-
+// Allows to force of the Guard
     void update() {
         double fx = -30*(velocity().x-vx);
         omni_apply_force(fx,0);
         if ( counter > 0 ) {
             counter--;
         }
-
     }
 
     void stop() {}

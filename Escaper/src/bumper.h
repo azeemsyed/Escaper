@@ -5,6 +5,11 @@
 
 using namespace enviro;
 
+/*
+This is a class to define the Bumper behavior to allow the guards
+to go across walls
+*/
+
 class BumperController : public Process, public AgentInterface {
 
     public:

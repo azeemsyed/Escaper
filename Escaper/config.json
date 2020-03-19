@@ -4,7 +4,13 @@
     "ip": "0.0.0.0",
     "port": 8765,
 
-    "buttons": [],
+    "buttons": [
+        {
+            "name": "restart",
+            "label": "Restart",
+            "style": { "background": "white", "borderColor": "black" }
+        }                         
+    ],
 
     "agents": [  
         {

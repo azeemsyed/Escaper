@@ -26,6 +26,12 @@ class GuyController : public Process, public AgentInterface {
     double airborne() { 
         return height() > H_MIN;
     }
+/* 
+In the void init we are defining:
+    - the keyboard events to move arbitrary
+    - how the guy aka arbitrary goes to jail
+    - how to restart the level
+*/
 
     void init() {
         prevent_rotation();
@@ -56,13 +62,23 @@ class GuyController : public Process, public AgentInterface {
             }else if ( k == "s" ) {
                 firing = false;
             }
-        });     
+        }); 
+        watch("button_click", [&](Event& e) {
+            if ( e.value()["value"] == "restart") {
+                  teleport(0,280,0);
+            } 
+        }); 
+
         notice_collisions_with("Ghost", [&](Event &e) {
             teleport(280,-250,0);
-        });               
+        });
     }
+        
     void start() {}
-
+/* 
+In the void update we are defining:
+    - the jump behavior
+*/
     void update() {
         double fx;
         double fy = JUMP ? JUMP_F : 0;
@@ -92,6 +108,7 @@ class GuyController : public Process, public AgentInterface {
 
     bool LEFT, RIGHT, JUMP, firing;
     double vx;
+    double z = 1.0;
 
     const double VEL_X = 20;
     const double JUMP_F = -2300;
@@ -100,7 +117,7 @@ class GuyController : public Process, public AgentInterface {
     const double H_MIN = 1.0;
 
     const json BULLET_STYLE = { 
-                   {"fill", "green"}, 
+                   {"fill", "black"}, 
                    {"stroke", "#888"}, 
                    {"strokeWidth", "5px"},
                    {"strokeOpacity", "0.25"}
